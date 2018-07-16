@@ -1,0 +1,5 @@
+In Node.js, file I/O is provided by simple wrappers around standard POSIX functions. 
+Every method in fs module has synchronous and asynchronous forms.
+Asynchronous methods take a last parameter as completion function callback. 
+Asynchronous method is preferred over synchronous method because it never blocks the program execution where as the synchronous method blocks.
+

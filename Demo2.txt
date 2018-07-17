@@ -1,1 +1,1 @@
-undefined
+In Node.js, file I/O is provided by simple wrappers around standard POSIX functions. 

@@ -34,7 +34,8 @@ http.createServer(function (req, res) {
     else{
         res.writeHead(404, { 'Content-Type': 'text/html' });
         var readStream = fs.createReadStream('PageNotFound.html');
-        readStream.pipe(res);
+        // readStream.pipe(res);
+        res.end(readStream);
     }
 }).listen(4994);
 

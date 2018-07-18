@@ -1,7 +1,7 @@
 var fs = require('fs');
 
-var readStream = fs.createReadStream('file.txt', 'utf8');
-var writeStream = fs.createWriteStream('write_file.txt');
+var readStream = fs.createReadStream('files/file.txt', 'utf8');
+var writeStream = fs.createWriteStream('files/write_file.txt');
 
 readStream.on('data', function(chunk){
     console.log('---------------------------------------');

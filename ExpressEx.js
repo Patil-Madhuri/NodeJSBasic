@@ -4,12 +4,12 @@ var fs = require('fs');
 app.use(express.static('public'));
 
 app.get('/home',function(req,res){
-    var readStream = fs.createReadStream('index.html');
+    var readStream = fs.createReadStream('files/index.html');
     readStream.pipe(res);
 });
 
 app.get('/about', function(req,res){
-    var readStream = fs.createReadStream('about.html');
+    var readStream = fs.createReadStream('files/about.html');
         readStream.pipe(res);
 })
 
@@ -36,7 +36,7 @@ app.get('/api', function(req,res){
 
 app.use(function(req,res){
     res.writeHead(404, { 'Content-Type': 'text/html' });
-    var readStream = fs.createReadStream('PageNotFound.html');
+    var readStream = fs.createReadStream('files/PageNotFound.html');
     readStream.pipe(res);
 });
 

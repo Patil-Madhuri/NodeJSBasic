@@ -4,7 +4,7 @@ var fs = require('fs');
 http.createServer(function (req, res) {
     console.log('Requested Url : ', req.url);
     if (req.url === '/home' || req.url === '/') {
-        var readStream = fs.createReadStream('index.html');
+        var readStream = fs.createReadStream('files/index.html');
         readStream.pipe(res);
     }
     else if(req.url === '/api'){
@@ -28,12 +28,12 @@ http.createServer(function (req, res) {
         res.end(JSON.stringify(jsonObj));
     }
     else if(req.url === '/about'){
-        var readStream = fs.createReadStream('about.html');
+        var readStream = fs.createReadStream('files/about.html');
         readStream.pipe(res);
     }
     else{
         res.writeHead(404, { 'Content-Type': 'text/html' });
-        var readStream = fs.createReadStream('PageNotFound.html');
+        var readStream = fs.createReadStream('files/PageNotFound.html');
         // readStream.pipe(res);
         res.end(readStream);
     }

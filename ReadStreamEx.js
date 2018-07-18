@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var readStream = fs.createReadStream('file.txt','utf8');
+// var readStream = fs.createReadStream('filesfile.txt','utf8');
 var data = '';
 readStream.on('data', function(chunks){
     console.log('-------------------------------------------------------------------------');
